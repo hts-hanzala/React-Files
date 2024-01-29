@@ -1,0 +1,36 @@
+•JS Expressions
+
+	{console.log('hello')}
+	
+•CSS in React & Styling Components
+
+	Inline CSS in React should be written as:
+		style={{backgroundColor:'red'}}
+		
+	In React CSS Properties like background-color should be written as backgroundColor as camelCase or with double quotes.
+	
+		"background-color"
+		
+	CSS class can be applied as className
+	To use bootstrap in React we have to download the package.
+	For CDN goto the website copy the link.
+	To install it from package use 'npm i bootstrap@latest'
+	Once installed import the CSS file into the component & JS also if needed.
+	
+	React Bootstrap is also a package but it needed to bootstrap to installed & imported.
+	
+	Material UI is also a popular framework for React.
+	
+•Conditional Rendering
+
+	This can be done using if-else/ternary operator(?).
+	
+	map() in JS is used to render list of data to the DOM.
+	Using this will through warning for keys.
+	
+
+  »Keys
+	Keys are used to identify the items that are added, removed or modified.
+	Most commonly use keys are IDs.
+	
+•

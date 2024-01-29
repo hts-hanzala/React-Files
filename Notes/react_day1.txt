@@ -1,0 +1,59 @@
+•React
+
+	HTML, CSS, JS  --> Calculator
+	React --> Calculator
+	
+	React is a JS library.
+	React is open source & works in efficient way.
+	React is developed by FaceBook
+	React is a single page application.
+	Instead using direct memory from browser, React creates Virtual DOM in memory to make necessary changes.React finds out what changes have been made, and changes only what needs to be changed.
+	
+	<h1>Heading</h1>
+	<h1>React</h1> --> Virtual DOM = Real Time DOM
+	
+•Installation
+
+	Node JS  --> Runtime, npm
+	Any JS supported notebook --> VS code, Replit
+	
+•WHy React?
+
+	It is flexible
+	It is created with a single focus to create components for web apps.
+	It is easy to test.
+	
+•How does a website works?
+
+	How we get a website when we search it
+	First user sends the request to server.
+	In return server sends the response,(HTML,CSS,JS) files of that request to user in multiple page apps.
+	
+	In single page apps things works differently.
+	Suppose search on browser google.com, 1st will be same in response server sends multiple files HTML CSS JS to user & then JS takes over all the received files.
+	Taking over means JS takes all the responsiblities of the page in which page will never reload.
+	this is not available in multiple page apps in that every page get reloads.
+	Page will not reload means in a website navbar & footer is same, only content is changed.
+	
+•NPX/NPM
+
+	Node Package Manages(npm) - This is use to download packages & store it to our local server.
+			(Just like purchasing something)
+	
+	Node Package Execute(npx) - This is use to download packages & returns it as soon as our work completes.
+			(Just like renting something)
+			
+
+•To create a React APP
+
+	IN console
+	 npm/npx create-react-app app1
+	 
+	 npx create-react-app
+	 
+	To run our app
+		npm start  --> Console
+	
+	
+	
+	

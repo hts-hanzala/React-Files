@@ -1,0 +1,85 @@
+»React Key Features
+
+	•Component based architecture
+		A component is the smallest unit in a react, anything that you want to render in browser can be rendered through components. This helps maintainability & reusability.
+		
+	•Virtual DOM
+		React uses virtual dom concept for DOM manipulation which improves the performance of an app.
+		
+	•Unidirectional Data flow
+		React's one way data flow(also called as one way binding) keeps everything modular & fast & easy to debugging.
+		
+	•JSX Syntax
+		React used JSX syntax which is similar to XML & HTML syntax which makes it easy to write.
+		
+	•SEO performance
+		This can be improved using the server-side rendering concept, We can develop isomorphic apps using react which improves the SEO performance.
+		
+»Folder Structure
+	
+	node_modules : Where the packages are installed.
+	public : This folder contains the static assets of an app.(This is for Public)
+	src : This folder contains all the related file for our app.
+	src/index.js : Entry point of app.
+		ReactDOM.render is used to render an element or component to virtual dom.
+		React.StictMode is used to check the error & identify problems.
+	package.json : This file contains dependecies for our app.
+	package-lock.json : This file contains dependecies for our app.
+	
+»Component
+	A component is the fundamental unit of any app in react.
+	They are capable of incapsulating the data & showing as a single unit.
+	Components make code reusable & takes care of separation of concerns.
+	Creating own components boost the productivity of any web-app.
+	
+	•There are 2 types of components:
+		Class Based Components
+		Function Based Components / Functinal Components
+			Creates a simple JS function & return what you want to show on browser.
+				function App() {
+					  return (
+						<div className='App'>
+						  <h1>Learning React</h1>
+						</div>
+					  );
+					}
+	
+»Virtual DOM
+	React uses Virtual DOM instead of an actual DOM.
+	Virtual DOM is a copy of Actual DOM.
+	When me make any changes to our component VDOM compares it to an actual and only change what is necessary.
+	This helps the browser that browser does'nt have to reload or get the data from server again.
+	
+»JSX
+	•Why JSX?
+		Without JSX the code of React would look like:
+					function App() {
+					  return (
+						React.createElement('h1', {}, 'Learning React')
+					  );
+					}
+	JSX stands for JavaScript XML
+	JSX don't support on server-side.
+	
+	babel  --> JSX  ---> Pure JS
+	babel is a built-in feature.
+	babel is an extension.
+	
+	<div>
+		
+	</div>
+	
+	div tag is used for grouping elements, this introduces extra & unnecessary node in DOM.
+	
+	React.Fragement is introduced to overcome the problem.
+	
+	This allows to group a list of react elements without adding any extra node.	
+	You can use empty tags also.
+		<></>
+	Fragements can be passed with attr if required but empty tags does'nt.
+	
+»Self Closing Tags	
+
+	<h1></h1>
+	<br>  --> <br/>
+	
