@@ -1,0 +1,42 @@
+•Component's
+
+	Class-based Components.
+	Function-based/Functional Components.
+	
+ »Class Constructor
+	If there is a constructor() function in a component, this function will be called when the component gets initiated.
+
+	The Constructor is where you initiate the component's properties.
+	
+	Component properties should be kept in state.
+	
+	constructor(){
+		super()
+		{other objects}
+	}
+	
+•States & Props
+
+	Why use these?
+		They are used to bind the data to the component that is hardcoded.
+		Hardcoded data is dynamic data that could be something internal or from another component.
+		
+	»State
+		The state is an initial value for a component which is used for interactivity,State is async.
+		Using constructor the state of component is created & initialized.
+		
+			constructor(){
+				super()
+				this.state = {counter:1}
+			}
+		The state counter is set to 1 & it can be accessed with {this.state}.
+		
+		State is only available in class based components.
+		To use state in functional components we use hooks.
+		
+		useState()
+		const [count, setCount] = useState(1)
+		
+		useState() takes initial state as the initial value & returns updated values.
+		Whenever the state is updated the component is re-rendered & updated value is displayed.
+		React remembers the current values of state between re-renders & provide the most recent values.

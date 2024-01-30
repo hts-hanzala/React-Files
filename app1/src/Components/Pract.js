@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 export default function Pract() {
     let a = 'car'
     const red = {"background-color":"red"}
+    // const [count, setCount] = useState(1);
   return (
     <div>
       <h1>This is for practice</h1>

@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Pract from "./Components/Pract";
 import First from "./Components/First";
+import ClassBasedComponents from "./Components/ClassBasedComponents";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <br />
       <p>this is para</p>
       <Pract />
+      <ClassBasedComponents/>
     </>
   );
 }
