@@ -1,0 +1,40 @@
+•Updating States
+
+	{this.state.counter}  --> To access the state in class component.
+	
+	»To update a state
+		     updateCounter = () => {
+				  this.setState({
+					counter : this.state.counter + 1
+				  })
+				 } 
+	  And then we passed the updateCounter function to an event as onClick={this.updateCounter}.
+	  
+	  {count}  --> TO access state in functional component.
+	  
+	  »To update state
+		  const updateCount = () => {
+			setCount(count + 1)
+		  }
+		And then we passed the updateCount function to an event as onClick={updateCount}.
+		
+•Props(Properties)
+
+	When we want to pass any data between components from one to another it known as props.
+	Props are immutable
+	In class components these can be accessed as this.props.
+	
+	»How to use props
+	
+		In class based components to pass the data in any component write in App.js
+		<ClassBasedComponents initial={10}/>
+		Here initial is a prop with the value 10.
+		TO get the value in ClassBasedComponents
+			we have to write prop as an arguement
+				    constructor(props){
+					super(props)
+				  }
+		Now in the whole component we can render the value of the props wherever we want to.
+		{this.props.initial}  -> This is how we can render the props value.
+		 
+	

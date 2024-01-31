@@ -1,18 +1,18 @@
 import "./App.css";
 import React from "react";
 import Pract from "./Components/Pract";
-import First from "./Components/First";
+import Navbar from "./Components/Navbar";
 import ClassBasedComponents from "./Components/ClassBasedComponents";
 
 function App() {
   return (
     <>
-    <First />
+      <Navbar />
       <h1>Learning React</h1>
       <br />
       <p>this is para</p>
       <Pract />
-      <ClassBasedComponents/>
+      <ClassBasedComponents initial={10}/>
     </>
   );
 }
