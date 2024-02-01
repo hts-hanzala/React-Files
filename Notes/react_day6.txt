@@ -1,0 +1,23 @@
+•Props
+	»props.children
+		Whtever is written between the opening & closing tag when invoking a component.
+		children='', this attr is also used in self-closing tag.
+		
+	»props default values
+		In case props can't accessed the values that is passed to it, default values are used.
+		(componentName).defaultProps = {
+								title : 'TITLE',
+								home : 'HOME',
+							  };
+							  
+	»PropTypes
+		In PropTypes we are setting the datatypes of props.
+		The error will logged on console.
+		To use it import prop-types library
+			import PropTypes from "prop-types"
+		Then,
+			(Component Name).propTypes = {
+props name<-- title : PropTypes.string.isRequired,
+			  home : PropTypes.string,
+			}
+	

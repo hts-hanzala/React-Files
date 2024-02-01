@@ -14,13 +14,16 @@ export default class ClassBasedComponents extends Component {
      } 
   render() {
     return (
-      <div>
+      <div className='m-5'>
         <h1>Class based component</h1>
         <h3 className="mx-3">{this.state.counter}</h3>
         <button className="btn btn-primary mx-3" onClick={this.updateCounter}>
           Update Counter
         </button>
-        <p>{this.props.initial}</p>
+        <br />
+        <h2>Props Started</h2>
+        <p>{this.props.value}</p> 
+        {/* <img src={this.props.link} alt="" /> */}
       </div>
     );
   }
