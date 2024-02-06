@@ -27,14 +27,14 @@
 	package-lock.json : This file contains dependecies for our app.
 	
 »Component
-	A component is the fundamental unit of any app in react.
+	A component is the fundamental/smallest unit of any app in react.
 	They are capable of incapsulating the data & showing as a single unit.
 	Components make code reusable & takes care of separation of concerns.
 	Creating own components boost the productivity of any web-app.
 	
 	•There are 2 types of components:
 		Class Based Components
-		Function Based Components / Functinal Components
+		Function Based Components / Functional Components
 			Creates a simple JS function & return what you want to show on browser.
 				function App() {
 					  return (

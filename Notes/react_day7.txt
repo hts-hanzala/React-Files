@@ -1,0 +1,45 @@
+•LifeCycle Methods
+	To know when the data is going to mount the DOM & when it is available, we use lifecycle methods.
+	Suppose if we want to call the data from the server & display it immediately on the page.
+	
+	Every component will have following phases in its lifecycle:
+	1) Mounting Phase --> When component is mounted to DOM tree.
+	2) Updating Phase --> When component is being updated with new states & props are being received.
+	3) Unmounting Phase --> Destroying the component from DOM.
+	4) Error Handling --> Handling Errors within React Component.
+	
+		These methods can be used in the following cases:
+			For making a server call, to set timer & to integrate with other frameworks.
+			To avoid necessary re-rendering of a component.
+			To update the component based on the props changed.
+			For clearing the values when component is mounted.
+	
+	» Mounting Phase:
+		At Mounting Phase following functions invoked:
+		constructor()
+		static getDerivedStateFromProps()
+		render()
+		componentDidMount()
+		
+		constructor():
+			Constructor are used only for the 2 purposes.
+			1) Initializing state of a component.
+			2) For building event handler methods to an instance.
+		
+		render():
+			Every React component must have render method.
+			This method should be a pure function which returns the same result every time it is called, It doesnt modify the component state.
+			This methods simply converts the JSX to JS objects.
+			
+		static getDerivedStateFromProps():
+			This methods invokes right before the render method.
+			This method is called both in mounting & updating phases.
+			This method takes props & state as an arguements.
+			This is a static method, we can't use 'this' within this method.
+			This method returns an object which will be the updated state & return null if there is no state updated.
+			This method introduces some complexity, hence it is used rarely.
+		
+		componentDidMount():
+			This method invokes immediately after the component is mounted to DOM.
+			It runs after the render method.
+			It is commonly is used to perform side functions like fetching the data from an API or modifying DOM.

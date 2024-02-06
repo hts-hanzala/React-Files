@@ -17,7 +17,7 @@
 	Node JS  --> Runtime, npm
 	Any JS supported notebook --> VS code, Replit
 	
-•WHy React?
+•Why React?
 
 	It is flexible
 	It is created with a single focus to create components for web apps.
@@ -37,7 +37,7 @@
 	
 •NPX/NPM
 
-	Node Package Manages(npm) - This is use to download packages & store it to our local server.
+	Node Package Manager(npm) - This is use to download packages & store it to our local server.
 			(Just like purchasing something)
 	
 	Node Package Execute(npx) - This is use to download packages & returns it as soon as our work completes.

@@ -6,6 +6,7 @@ export default class ClassBasedComponents extends Component {
         this.state = {
           counter:1
         }
+        this.updateCounter = this.updateCounter.bind(this)
       }
      updateCounter = () => {
       this.setState({
@@ -28,4 +29,3 @@ export default class ClassBasedComponents extends Component {
     );
   }
 }
-
