@@ -4,7 +4,12 @@ import Pract from "./Components/Pract";
 import Navbar from "./Components/Navbar";
 import ClassBasedComponents from "./Components/ClassBasedComponents";
 import Picture from "./Components/Picture";
-import MountingPhase from "./Components/MountingPhase";
+import MountingPhase from "./Components/LifeCycle Methods/MountingPhase";
+import UpdatingPhase from "./Components/LifeCycle Methods/UpdatingPhase";
+import UnmountingPhase from "./Components/LifeCycle Methods/UnmountingPhase";
+import ErrorBoundary, {
+  MyComponent,
+} from "./Components/LifeCycle Methods/ErrorBoundary";
 
 function App() {
   let link = "/logo192.png";
@@ -17,7 +22,12 @@ function App() {
       <Pract />
       <ClassBasedComponents link={link} value={10} />
       <Picture link={link} children={"This is an example of props.children"} /> */}
-      <MountingPhase />
+      {/* <MountingPhase />
+      <UpdatingPhase /> */}
+      {/* <UnmountingPhase /> */}
+      <ErrorBoundary>
+        <MyComponent />
+      </ErrorBoundary>
     </div>
   );
 }

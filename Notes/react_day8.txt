@@ -1,0 +1,53 @@
+•LifeCycle Methods
+ 
+	»Updating Phase:
+		At updating phase below methods are executed based on props or state being received,& updates happens in the component.
+		static getDerivedStateFromProps()
+		componentWillUpdate()
+		componentDidUpdate()
+		getSnapshotBeforeUpdate()
+		
+		static getDerivedStateFromProps():
+			This methods invokes right before the render method.
+			This method is called both in mounting & updating phases.
+			This method takes props & state as an arguements.
+			This is a static method, we can't use 'this' within this method.
+			This method returns an object which will be the updated state & return null if there is no state updated.
+			This method introduces some complexity, hence it is used rarely.
+		
+		componentWillUpdate():
+			componentWillUpdate() is a lifecycle method in React that gets called just before a component's update cycle starts.
+			It receives the next prop and state as arguments and allows you to perform any necessary actions before the component updates.
+			But this method is not recommended for updating the state, as it can cause an infinite loop of rendering.
+			It is used for basic tasks such as making API calls, updating the DOM.
+			componentWillUpdate() was once used alongside componentDidUpdate() to manage component updates, it has been deprecated in modern React (16.3 and latest). The preferred approach now involves using getDerivedStateFromProps() for state preparation and componentDidUpdate() for post-update actions.
+			
+		componentDidUpdate():
+			This Method takes prevProps & State as an arguement.
+			Invoked immediately after the changes are updated.
+			
+		getSnapshotBeforeUpdate():
+			This Method takes prevProps & State as an arguement.
+			Invoked right before changes are made to DOM.
+			It allows you to capture some information from DOM such as scroll position,
+			before it potentially changes due to update.
+			
+		»Unmounting Phase:
+			The unmounting phase refers to the lifecycle stage when a component is being removed from the DOM and is no longer rendered.
+			During this phase, React performs a series of cleanup operations to ensure that the component and its associated resources are properly disposed.
+			The unmounting phase is the last stage in the lifecycle of a React component and occurs when the component is being removed from the DOM tree.
+			
+			During the unmounting phase, React calls the following lifecycle methods in order:
+
+			componentWillUnmount(): This method is called just before the component is removed from the DOM. It allows you to perform any necessary cleanup, such as canceling timers, removing event listeners, or clearing any data structures that were set up during the mounting phase.
+			After this method is called, the component is removed from the DOM and all of its state and props are destroyed.
+			
+			If a component is unmounted, it cannot be mounted again. If you need to render the component again, you will need to create a new instance of it.
+			
+		»Error Handling
+			Error Handling in react can be taken care using:
+			static getDerivedStateFromError()
+			componentDidCatch()
+			
+			Error boundaries should be defined in order to catch the errors occurring within the child components.
+			Whenever a component crashes due to JS error the error will logged & fallback to UI.
