@@ -1,0 +1,66 @@
+•Perform http GET request
+
+	Let's Understand how to handle Ajax request in React.
+	React by default does not provide any helper method to manage Ajax request.
+	Any other 3rd party JS library is used to handle request.
+	API calls should be made after the component mount's using useEffect hook.
+	Once the data is fetched make it available to your component by setting the state of the component to trigger re-render using useState hook.
+	
+	Here we're using axios for handling the request.
+	
+		Axios is a promise-based API that can be used to make asynchronous calls to the back-end in apps.
+		
+	npm install axios
+	
+	Axios offers methods:
+		get()
+		post()
+		put()
+		delete()
+		patch()
+		
+•Form's
+	In web-apps forms are required for taking user inputs for placing order, booking tickets, etc.
+	Let us see how to handle forms in React
+	
+	The form that you create using React to accept user inputs is different from HTML form.
+	Users will not be able to input values in react because react uses unidirectional data flow.
+	Before forms understand what is undirectional data flow.
+	
+	»Unidirectional Data Flow
+		Most frameworks follow two way data binding.
+		This would allow for update from both the ends, i.e changes can be done from view to model & vice versa.
+				Model  ---> View
+		In the above approach state of the model could be change by both model & view, it would cause unpredictable data flow.
+		React uses undirectional data pattern where the changes will be done from only one component to view not vice versa.
+		This would prevent unpredictable data flow.
+		
+•Form's
+	In the form we can't interact with input elements
+	You can make forms interactive by setting callback onChange, when the state of input changes.
+	Maintain state for every form field
+	The onChange attr can be used as:
+		onChange={(e)=><updatedStateName>(e.target.value)}
+		
+•React Refs
+	We can create two different ways of forms in React:
+		1) Controlled Component.
+		2) Uncontrolled Component.
+		
+	» Controlled Component:
+		In HTML form elements such as input, textarea, & select, typically maintains their own states and that gets updated based on user input.
+		In react we handle it using states & states gets updated using setState().
+		So an input form whose value is controlled by react in this way is called as controlled components.
+			ex : <input type="text" value={userName}  onChange={(e)=>setUserName(e.target.value)} />
+			
+	» Uncontrolled Component:
+		The traditional HTML input elements are uncontrolled components where the form data is handled by DOM itself.
+		In this we don't use value attribute:
+			<input type="text"/>
+		Input will not have value attribute and event handler instead to get the value from the DOM, Refs is used as follows:
+			<input type='text' ref={this.input}/>
+		In react ref provides a way to access the DOM node, or the react elements and helps in getting the value from the DOM.
+		Refs are to be used when we have this requirements:
+		1) Integrating with 3rd party libraries, like D3 which has its own DOM manipulation API'S.
+		2) To use media playbacks audio, video, refs provides control over the DOM API.
+		By using this we are changing the way of handling data in React.

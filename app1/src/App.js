@@ -10,6 +10,8 @@ import UnmountingPhase from "./Components/LifeCycle Methods/UnmountingPhase";
 import ErrorBoundary, {
   MyComponent,
 } from "./Components/LifeCycle Methods/ErrorBoundary";
+import HttpRequest from "./Components/HttpRequest";
+import Form, { FormsClass } from "./Components/Forms";
 
 function App() {
   let link = "/logo192.png";
@@ -25,9 +27,12 @@ function App() {
       {/* <MountingPhase />
       <UpdatingPhase /> */}
       {/* <UnmountingPhase /> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <MyComponent />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+      {/* <HttpRequest /> */}
+      <Form />
+      <FormsClass/>
     </div>
   );
 }

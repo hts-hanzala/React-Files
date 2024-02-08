@@ -23,6 +23,6 @@ export default class ErrorBoundary extends Component {
 
 export class MyComponent extends Component {
   render() {
-    throw new Error("This is intentional Error");
+    throw new Error("This is an intentional Error");
   }
 }
