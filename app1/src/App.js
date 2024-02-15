@@ -12,6 +12,8 @@ import ErrorBoundary, {
 } from "./Components/LifeCycle Methods/ErrorBoundary";
 import HttpRequest from "./Components/HttpRequest";
 import Form, { FormsClass } from "./Components/Forms";
+import UseState from "./Components/Hooks/UseState";
+import UseEffect from "./Components/Hooks/UseEffect";
 
 function App() {
   let link = "/logo192.png";
@@ -31,8 +33,11 @@ function App() {
         <MyComponent />
       </ErrorBoundary> */}
       {/* <HttpRequest /> */}
-      <Form />
-      <FormsClass/>
+      {/* <Form />
+      <FormsClass/> */}
+      <UseState />
+      <UseEffect />
+      
     </div>
   );
 }

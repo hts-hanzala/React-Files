@@ -1,0 +1,61 @@
+•React LifeCycle Methods & Hooks
+	There are 3 types of LifeCycle Methods:
+		Mounting, Updating, Unmounting, Error Handling 
+	In Functional Components we use hooks to perform API Calls, to get the form data & we can also save this data in database.
+	In this scenario we use hooks:
+	
+	LifeCycle methods are needed in following cases:
+	»For making an Ajax call to set timer & to integrate with other framework.
+	»To avoid unneccessary re-rendring of any component.
+	»To update the component based on the props change.
+	»For clearing the values when component is unmounting.
+	
+	Every component will have following phase in their lifecycle:
+		Mounting, Updating, Unmounting
+		
+•Hooks
+	»useState()
+		This is used to add state value within a functional components.
+		It is equivalent to this.state statement of class components.
+		This hook helps to preserve the state value of a component.
+		
+		Syntax:
+			const [state, setState] = useState(initialState)
+			
+		useState is a function which take initialState as the initial value for the state variable & return 2 values.
+		Where state is a state variable which holds the initial value & setState is the updated value for the state.
+		
+	»useEffect()
+		Mounting Phase
+			This is where the component gets mount on the Dom for the first time.
+			
+		Syntax:
+			useEffect(()=>{
+				// function
+				return // optional function
+			}, [// dependency array])
+		
+		Variation of useEffect Hook:
+			1) no dependency
+				useEffect(()=>{
+					// actions performed
+				})
+				when 2nd parameter is not passed then useEffect executes once after the component is mount & every time the component gets updated.
+			2) An empty array
+				useEffect(()=>{
+					// actions performed
+				}, [])
+				when 2nd parameter is an empty array then useEffect executes only once after component mounts.
+			3) Props & State
+				useEffect(()=>{
+					// actions performed
+				}, [props, state])
+				When 2nd parameter is a state or props then useEffect executes once after component mounts and then every time any dependency value changes.
+	
+	»useMemo()
+		We use this to enhance the productivity or optimize our app.
+		This is same as memo function of JS.
+		
+			
+		
+		
