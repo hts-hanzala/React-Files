@@ -1,0 +1,34 @@
+•Hooks
+	»useMemo()
+		We use this to enhance the productivity or optimize our app.
+		This is same as memo function of JS.
+		useMemo hook returns a memoized value just like the memo function of JS.
+		useMemo & useCallback are similar, The main difference is useMemo saves or remember the value of the function % useCallback saves or remember the whole function.
+		Syntax:
+		const memo = useMemo(()=> // function, [// dependency array.])
+		
+	»useCallback()
+		This returns a memoized callback function.
+		This will only runs when one of its dependencies update.
+		One of the reason to use this hook is to prevent a component from re-rendering uless its props are changed.
+		Syntax:
+			const func = useCallback(()=> // function, [// dependency array])
+			
+	»useReducer()
+		This hook is same as JS reduce method, In which wole array reduce to one single value.
+		It is use to substitute useState hook, where we have to change states for multiple objects / elements.
+		Syntax:
+			useReducer(reducer, initialState)
+		reducer in this hook are pure functions that take in a state & action & return a new state.
+			const [state, dispatch] = useReducer(reducer, initialState)
+		initialState : You can either give it on spot or before the function.
+		reducer: Pure function which takes two args state & action there are same as state & setState
+		dispatch: This is used to when/where we want to change state, it is like setState.
+		If state is a single boolean, number or string use useState hook, if state is an object or an array use useReducer hook.
+	
+	»useRef()
+		This hook can be used to store changeable value that does'nt cause a re-render when updated.
+		It can be used to access DOM directly.
+		
+		
+		

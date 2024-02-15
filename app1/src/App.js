@@ -14,6 +14,10 @@ import HttpRequest from "./Components/HttpRequest";
 import Form, { FormsClass } from "./Components/Forms";
 import UseState from "./Components/Hooks/UseState";
 import UseEffect from "./Components/Hooks/UseEffect";
+import UseMemo from "./Components/Hooks/UseMemo";
+import UseCallback from "./Components/Hooks/UseCallback";
+import { UseReducer } from "./Components/Hooks/UseReducer";
+import UseRef from "./Components/Hooks/UseRef";
 
 function App() {
   let link = "/logo192.png";
@@ -37,7 +41,10 @@ function App() {
       <FormsClass/> */}
       <UseState />
       <UseEffect />
-      
+      <UseMemo />
+      <UseCallback />
+      <UseReducer />
+      <UseRef />
     </div>
   );
 }
