@@ -14,4 +14,4 @@ const UseRef = () => {
   );
 };
 
-export default UseRef
+export default UseRef;

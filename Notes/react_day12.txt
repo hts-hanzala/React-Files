@@ -1,0 +1,15 @@
+•Hooks
+	»Context API
+		This is used to overcome the props drilling problem.
+		This is just like a warehouse of data which provides to pass / share data through multiple componenets.
+		For this first we need to create a context then assign Provider & Consumer.
+		Context provides a way to share values like between componenets without having to explicity pass a prop to the every level of the tree.
+		
+	»useContext()
+		This is same as context API
+		this is used to pass data from one componenet to multiple componenets.
+		
+	»Custom Hooks
+		This is used to create own hooks.
+		This hooks are the pre-defined hooks (useState, useEffect ...)
+		We're creating a componenet & using that hook in the created componenets & then calling only the componenet where we need it is called custom hooks.

@@ -18,6 +18,9 @@ import UseMemo from "./Components/Hooks/UseMemo";
 import UseCallback from "./Components/Hooks/UseCallback";
 import { UseReducer } from "./Components/Hooks/UseReducer";
 import UseRef from "./Components/Hooks/UseRef";
+import ContextParent from "./Components/Hooks/Context API/ContextParent";
+import UseContextP from "./Components/Hooks/Context API/UseContext/UseContextP";
+import CustomHooks from "./Components/Hooks/CustomHooks";
 
 function App() {
   let link = "/logo192.png";
@@ -39,12 +42,15 @@ function App() {
       {/* <HttpRequest /> */}
       {/* <Form />
       <FormsClass/> */}
-      <UseState />
+      {/* <UseState />
       <UseEffect />
       <UseMemo />
       <UseCallback />
       <UseReducer />
-      <UseRef />
+      <UseRef /> */}
+      {/* <ContextParent /> */}
+      <UseContextP/>
+      <CustomHooks/>
     </div>
   );
 }
