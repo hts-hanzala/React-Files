@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "personN": "Tom",
+      "place": "Qatar",
+      "designation": "Tester",
+      "id": 1
+    },
+    {
+      "personN": "Han",
+      "place": "USA",
+      "designation": "Developer",
+      "id": 2
+    },
+    {
+      "personN": "Rohan",
+      "place": "India",
+      "designation": "Developer",
+      "id": 3
+    }
+  ]
+}

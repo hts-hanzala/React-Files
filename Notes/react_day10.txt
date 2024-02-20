@@ -52,9 +52,6 @@
 				}, [props, state])
 				When 2nd parameter is a state or props then useEffect executes once after component mounts and then every time any dependency value changes.
 	
-	»useMemo()
-		We use this to enhance the productivity or optimize our app.
-		This is same as memo function of JS.
 		
 			
 		

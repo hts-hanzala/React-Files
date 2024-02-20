@@ -1,0 +1,26 @@
+•Perform http POST & DELETE request
+	Previously we use axios for http GET request.
+	Similarly GET,POST & DELETE http calls can perform on form submission according to requirement using axios.
+	We can use any backend technology to perform async operations.
+	React connect well with any backend technology.
+	In this we will use json-server which is use to fake backend services.
+	
+	»Installation of Json-server
+		npm install json-server.
+		
+	»JSON file
+		Create a JSON file with any name with the extension (.json).
+		This file consits of the data, that must be export by REST API CRUD endpoints are automatically created for objects to JSON.
+		
+	»Running the server
+		Start the sever by
+			json-server --watch db.json --port 4000
+			
+		As a parameter we need to pass the json file.
+		--watch, this parameter starts the server in watch mode, means if any changes done in file that updates the exposed API.
+		--port, this specifies on which port to run the server, default is 3000
+		The following HTTP request are automatically created by json-server.
+	
+	»Http POST & DELETE
+		we've used .post & .delete method of axios to see how data gets saved on the server & gets deleted from the server.
+		

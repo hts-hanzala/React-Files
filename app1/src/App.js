@@ -10,8 +10,8 @@ import UnmountingPhase from "./Components/LifeCycle Methods/UnmountingPhase";
 import ErrorBoundary, {
   MyComponent,
 } from "./Components/LifeCycle Methods/ErrorBoundary";
-import HttpRequest from "./Components/HttpRequest";
-import Form, { FormsClass } from "./Components/Forms";
+import HttpRequest from "./Components/AxiosRequests/HttpRequest";
+import Forms, { FormsClass } from "./Components/Forms";
 import UseState from "./Components/Hooks/UseState";
 import UseEffect from "./Components/Hooks/UseEffect";
 import UseMemo from "./Components/Hooks/UseMemo";
@@ -21,6 +21,8 @@ import UseRef from "./Components/Hooks/UseRef";
 import ContextParent from "./Components/Hooks/Context API/ContextParent";
 import UseContextP from "./Components/Hooks/Context API/UseContext/UseContextP";
 import CustomHooks from "./Components/Hooks/CustomHooks";
+import HttpPost from "./Components/AxiosRequests/HttpPost";
+import HttpDelete from "./Components/AxiosRequests/HttpDelete";
 
 function App() {
   let link = "/logo192.png";
@@ -49,8 +51,10 @@ function App() {
       <UseReducer />
       <UseRef /> */}
       {/* <ContextParent /> */}
-      <UseContextP/>
-      <CustomHooks/>
+      {/* <UseContextP/>
+      <CustomHooks/> */}
+      <HttpPost />
+      <HttpDelete />
     </div>
   );
 }
