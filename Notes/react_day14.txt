@@ -42,7 +42,9 @@
 		For this to see in action create a Route & assign it a paramater path.
 		For working of this use useParams hook of react-router-dom.
 		
-	»useParams
+•React Router Hooks
+		
+	»useParams()
 		Suppose we're creating Topic component & when its we can access it with /topic.
 		If we want to specify topics like React, Angular weill add /topic/react.
 		This will show either blank page or error.
@@ -55,10 +57,12 @@
 		
 		Then we can access all the paramaters using the variable name.
 		
-	»Error Handling
+	»Error Components
 		When we have to show error on the undefined routes.
 		If user tries to access a component which is not exist we can show an error page instead of blank page.
 		Just create an Error component, and assign every routes to it.
+		
+		<Route path="*" element={<Error/>}/>
 		
 		
 		

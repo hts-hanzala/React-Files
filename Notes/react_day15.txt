@@ -1,0 +1,33 @@
+•React Router
+
+	»Outlet Component
+		In React Router, the Outlet is a component provided by the react-router-dom library. The Outlet component is used in combination with the Routes component to handle nested route rendering. It serves as a placeholder where the content of child routes will be rendered.
+		
+		
+•React Router Hooks
+
+	»useNavigate
+		In react-router-dom v6 the useHistory hook has been deprecated & useNavigate is its alternative.
+		The reason for switching is to provide better compatibility with React Suspense.
+		Suspense is a feature for managining async operations in React.
+		
+		useNavigate() hook returns a function that lets you handle route changes & navigate programmatically.
+		import the hook & store it in a variable name navigate, then we use navigate to navigate between components.
+		
+	»useLocation
+		This hook returns the location that represents the react URL.
+		The value of the location object changes whenever the user navigate to a new URL.
+		import the hook & store it in a variable name location, then we can use location & display it on screen.
+		
+	»useMatch
+		This is a hook that matches the route(/) that checks if the route is matching.
+		It is condition based rendering, means we renders using this hook according to condition.
+		import the hook & store it in a variable name match, then we can use location & use the params to match the URL & renders the component based on condition.
+		
+	»useRoutes
+		React Router provides 2 methods for defining routes in React apps.
+		The 1st & most popular way is to use Route component, & nest it in Routes
+		The 2nd method to use useRoutes hook.
+		First create a component, then adds all the imports to the created component
+		Next import useRoutes from package, assign it to a variable then creates an array where we passed arguements & adds all the path & elements as an objects.
+		Then import it & render it as BrowserRouter child.
