@@ -1,0 +1,139 @@
+•Redux
+	»Why Redux?
+		Consider a react app develop with the architecture as shown in the image.
+			To overcome the problem of the image we use redux architecture which manages the entire data in a single source.
+	
+•Intro to Redux
+	Redux is used for state management.
+	Redux is an application data-flow architecture, which is used for predicting state changes in JS apps.
+	Redux is not a framework, Redux can be used with the other libraries also, but mostly use with a react.
+	Dan Abranov created redux in 2015, Redux was inspired greatly by functional programming language and flux architecture.
+	To install Redux:
+				npm install redux react-redux
+	The main concept of Redux architecture are:
+		Store => In this the entire state of the application is stored.
+		Actions => JS objects which encapsulates the events triggered within the application.
+		Reducers => Pure functions that modify the state of the applications according to the action triggered.
+	
+	In Redux, state is an immutable object. The state object cannot be changed directly in Redux.
+	Triggering actions are the only way to modify the state.
+	Every time the state is modified a new object should be represent the modifications that are made to state object.
+	
+	»Handling Immutability
+		There are many ways to handle immutability.
+		Object assign and spread operator for Arrays are the most popular approaches when working in ES6.
+			1) Object.assign()
+				Consider a state object as shown below
+					state = {status : 'logged out', value:'guest', email:''}
+				When Login action gets triggered. We want to change only the states and value properties we can use object.assign() to create a copy and modify only few properties, like
+					object.assign({}, state:{
+						status: 'logged in',
+						value : action.value
+					})
+				The first parameter to object assign is the target, which is a new empty object, Then we are mixing the new object together with our existing state and also changing the states and value properties, Show the result is effectively a clone of our state object, but with the state modified after login.
+			
+			2) Spread Operator
+				The spread operator is represented using three dots(...).
+				It copies its own enumerable properties from a provided object onto a new object.
+					let obj1 = {id:1, name:'Tom'}
+					let obj2 = {id:2, name: 'Jack'}
+					let mergedObj = {...obj1, ...obj2}
+					  // output : {id:2, name: 'Jack'}
+•Redux data flow
+	The data flow is shown in the image.
+	
+	1) React Components: This represents the UI rendered on the browser. Components would dispatch action for events triggered within them & whatever the state changes the component renders the current state by connecting to the Redux store.
+	
+	2) Action Creators : These are the funtions that wrap the actual action object.
+	
+	3) Action : Action is a plain JS object, Action is a command to change the state when an event is triggered.
+	
+	4) Middleware : This is a translator between the actions & reducers, Its purpose is to intercept the actions before it reaches the reducer.
+	
+	5) Reducer : This changes the state of the application based on the action triggered, Reducer is a function that accepts action & current state & modifies the current state by creating a copy of it, based on the action.
+	
+	6) Store : Store is responsible for managing the entire state of the application. State management is centralized, In Redux, Action will be dispatched to the store using the dispatch method of the store.
+	
+	
+	»Actions
+		In React, components were associated with state & the state changes happen within the component.
+		
+		In Redux, since the state management is centralized the components cannot modify the state directly.
+		Hence an Action is dispatched whenever there is an event triggered within a component.
+		
+		An Action is a JS object which describes an event.
+		Action object must contain a type property which describes the type of the action triggered & optionally can have payload information.
+		Eg : 
+			{
+				type: 'Login'
+				isAuthenticated
+			}
+		Action creators are called convenient functions.
+		It is not mandatory to define action creators to return the action, rather the action object can be used for dispatching an action, but action creators help in achieving maintainability, abstraction, encapsulation, and testability.
+		Action only tells what to do not how to do.
+		
+	»Reducers
+		Reducers contain the logic for modifying the state in Redux.
+		The state is immutable in Redux; hence, state cannot be directly modified by reducers.
+		Reducers in Redux are responsible for copying the current state and modifying the copy and returning the new state.
+		Reducers are used to achieve immutability in Redux. Reducers are pure functions that are responsible for handling the actions and modifying the state of the application based on the action triggered.
+		Reducers are functions that accept the current state and an action object, as arguments and will return the new state.
+		The initial state of the application must be passed to the reducer which will be used when the application is run for the first time​​​​​​​.
+		Eg:
+			const LoginReducer = (state={},action) => {
+			    switch(action.type) {
+			        case "LOGIN":
+			                return {
+			                  ...state,
+			                  isAuthed: action.isAuthenticated
+			                }
+			        default:
+			            return state
+			    }
+			}
+			export default LoginReducer;
+		
+		​​​​​​Things Forbidden in Reducers:
+			Mutating the arguments passed.
+			Performing side effects like API calls, AJAX call, etc.
+			Calling other non-pure functions (Ex: date.now(), Math.random()).
+		
+		»Combining multiple reducers
+			To achieve modularity, multiple reducers can be written in Redux.
+			Though there can be multiple reducers as application grows, only one reducer object can be passed to the createStore method.
+			We can use the combineReducers() method of Redux can be used to combine multiple reducers into a single reducing function and then pass it to the createStore method.
+			Whenever an action is triggered the action would reach the root reducer first and then all the reducers get the action from root reducer.
+			The root reducer will combine the state from all the reducers and create a single new state object and will update the store with the new state.
+			Eg:
+				​​​​​​​import LoginReducer from './LoginReducer';
+				import CounterReducer from './CounterReducer';
+				import { combineReducers } from 'redux';
+				const rootReducer = combineReducers({
+					CounterReducer,
+					LoginReducer,
+				})
+				export default rootReducer;
+	
+	»Store
+		The store is the container used to place the entire state of the application.
+		A Store can be created as shown below:
+			import {createStore} from 'redux';
+				function myReducer() {
+				}
+			const store = createStore(myReducer)
+		The reducer is passed to the store. Since, the state changes are done by reducer, the reducer would update the store with the updated state.
+		Every time reducer changes, the state updates the store and the store would contain the latest state.
+		createStore method is deprecated in version 4.2.1 & replaced by configureStore.
+		To use configureStore we have to first install redux toolkit,
+			npm install @reduxjs/toolkit
+	
+	»Store Methods
+			1. getState(): This method can be used to get the current state from the store.
+
+			2. dispatch(action): React components should use this method to dispatch an action whenever an event occurs within the component. This method dispatches an action and then the reducer takes care of updating the state.
+
+			3. subscribe(listener): Used for registering the listeners, 
+
+			There is no API's to change the data in the store.
+			The only way to change the state present in the store is by dispatching actions.
+			The store would handle actions using reducers.
