@@ -1,0 +1,107 @@
+•Middleware
+	»Why Middleware?
+		Middleware need not be a pure function like reducers.
+		It can cause side effects. So, whichever functionality that could not be included within the reducer, can be included in middleware.
+		
+	»Uses of middleware:
+		1) Provides functionality between action and reducer. After an action is 
+		   triggered and before its reduced, middleware can act.
+		   
+		2) Organizes all the changes to the database, (ajax calls) into one place.
+		
+		3) Allows pre-processing of actions. Correct syntax can be checked for to make sure   that they conform to the standards or edit them in some way like wrapping them in a function.
+		
+		4) Perfect for debugging an application.
+		
+		5) Allows to keep actions clean so that less boilerplate is required and fewer tests in actions are needed to make sure that they are working correctly.
+		
+		6) API calls are happening through middleware so if there is a mistake, middleware at first can be checked.
+		
+	»Popular middleware Libraries are:
+		Redux Thunk
+		Redux Saga
+		
+		The most common requirement to use middleware is to support asynchronous actions. Middleware lets us dispatch async actions in addition to your regular actions. Middleware allows to wrap the dispatch method of the store.
+		
+	»Redux Thunk
+		Redux thunk middleware allows the developer to write action creators which returns a function instead of an action object.
+		The middleware can be used to delay the dispatch of action or dispatch the actions based on certain conditions.
+		The applyMiddleware is a function which accepts one or more middlewares as arguments as returns a function.​​​​​​​
+		Ex :
+			let store = applyMiddleware(thunk)(createStore)(reducer);
+		To the applyMiddleware function, the type of middleware used needs to be passed.
+		Before passing thunk to the applyMiddleware method, redux-thunk package must be installed and imported it as shown below:
+			npm install redux-thunk
+			import thunk from 'redux-thunk';
+			
+	»Custom Middleware
+		It is possible to write own middleware in Redux. The basic code for writing custom middleware is shown below:
+			const customMiddleware = store => next => action => {
+			  ...
+			}
+		Custom middleware receives a store then returns a function that receives the next function and returns another function that receives an action.
+		
+		next: This function is invoked when the middleware is done with the task assigned to do. This function forwards the actions to either reducer or another middleware.
+		
+		action: That's the action currently being dispatched.
+		
+		The custom middleware has access to the getState() method of the store to fetch the current state and dispatch() method of the store to dispatch actions if required.
+
+•Binding React with Redux
+	Since, the state is managed by the Redux store. So to access and render the state properties, the React components need to connect to the Redux store.
+
+	The React components can connect to the Redux store and fetch the updated state from Redux store.
+	Once the components get the state from Redux store they can be accessed as props.
+
+	React components can be written by the developer by subscribing to the store using the store.subscribe() and the current state can be fetched from the store using store.getState() method, but React Redux has already implemented the necessary performance optimizations.
+	
+	Hence, components are generated using the methods provided by the react-redux library, rather than writing the components by hand.
+	
+	To connect to the Redux store, the react-redux library provides connect() function.
+	To use connect, the two functions to be defined are:
+	1) mapStateToProps
+	2) mapDispatchToProps
+	
+	mapStateToProps: This function is used to pass the part of the data from the store in the form of props to the connected component.
+	Ex:
+		let mapStateToProps = function(state){
+			return {        authenticated:state.LoginReducer.isAuthed
+			};
+		  }
+	
+	mapDispatchToProps: This function is used to dispatch actions. The mapDispatchToProps() function accepts the dispatch() method as an argument and returns a callback. The callback returned from the mapDispatchToProps function will be available as props within the React component.
+	Ex:
+		  let mapDispatchToProps = function(dispatch){
+			return {
+			  onLogin:(data)=>{
+				dispatch(loginValidate(data))
+			  }
+			}
+		  }
+		  
+	The above mentioned functions are passed as arguments to connect function.
+	Ex:
+		let App= connect(mapStateToProps,mapDispatchToProps)
+		
+	Whenever the state is updated by the Reducer the mapStateToProps method in the component is executed, then the component would fetch the updated state from the Redux store which is accessible to the component as props. Whenever props change the component is re-rendered with the updated values.
+	
+	React Redux provides hooks useSelector and useDispatch as an alternative to the connect higher order function.
+	
+	1) useSelector
+
+	This hook is equivalent to mapStateToProps. This hook takes a function as an argument and returns the part of the state you want.
+	
+		const selector = useSelector(state=>state.LoginReducer.isAuthed)
+		
+	You may use useSelector() hook multiple times within a component. Each call to useSelector() creates an individual subscription to the Redux store.
+	
+		const selector = useSelector((state) => state.<yourReducer>);
+	
+	2) useDispatch
+
+	This hook is equivalent to mapDispatchToProps. useDispatch hook returns a method which can be used to dispatch actions.
+	
+		const dispatch = useDispatch()
+		dispatch(loginValidate(data))
+	
+	When compared to connect, with the useSelector and useDispatch hooks, you can write more simpler and cleaner code.
