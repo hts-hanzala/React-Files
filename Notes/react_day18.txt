@@ -1,0 +1,78 @@
+•React Developer Tools
+	This is a browser extension for React which helps us to inspect React components.
+	This extension have a powerful set of utilites to inspect React components tree.
+	Installation:
+		https://chromewebstore.google.com/
+		Search React Developer Tools & install it.
+	Now in the browser devtools you'll find two extra tabs Components & Profiler.
+	In Components tab we can track the props & state, components tree & how the components is rendering.
+	Profiler, first we have to start the recording in this tab, it will track the changes & how much time did a component take to render.
+	To know the reason why the component re-rendered click ' Record why each component rendered while profiling.' in settings under Profiler tab.
+
+•Redux Developer Tools
+	»Time Travel Debugging
+		This is a powerful way to see exactly how your app state is changing over time, You can travel through time as you debug.
+		You need to include a line of code in your store component.
+		configureStore({
+		  reducer: rootReducer,
+		  devTools:
+			window.__REDUX_DEVTOOLS_EXTENSION__ &&
+			window.__REDUX_DEVTOOLS_EXTENSION__(),
+		});
+		To open the extension tab right click & hover to Redux DevTools & select where we have to open the tab.
+		Inside Redux DevTools tab there are several tabs for several uses.
+		Like in Action tab you can check the Action of Redux, Then in State we can check the state of our app , in Diff it will show us the difference between previous State & updated State, in Trace we can see what is changing the state.
+		
+•Charts
+	In React charts can be implemented using chart.js & react-chart-js library.
+	TO intall the library:
+		npm install chart-js react-chartjs-2
+	Then add the data for the chart & import Bar component from react-chartjs-2 & pass the data as props.
+	To register the scale, Add this line:
+		import {Chart, registerables} from "chart.js"
+		Chart.register(...registerables)
+		
+•Flux
+	Flux is not a Framework nor a library, it is a data-flow architecture.
+
+	»Why Flux?
+		The React app which we have created so far is simple & can be maintained easily.
+		But when the complexity of the app grows it will be difficult to manage.
+		In this case we can use the architectural pattern for developing & maintaining large scale apps.
+		React uses Flux pattern for developing app where unidirectional data flow is ensured.
+		As the data flow is unidirectional it would be easy to track the event flow.
+	
+	»What is Flux
+		To maintain unidirectional data flow in an app Facebook has introduced flux architecture.
+		Flux is like MVC architecture which helps to flow the data in one direction.
+		Flux have different components like Action, Dispatcher, Store, View:
+		Action : Helper method that facilitate passing data to the dispatcher.
+		Dispatcher : Receives actions & brodcasts payloads to reistered callback.
+		Store : Containers for app state & logic that have callbacks registered to the dispatcher, Store is a global component in Flux.
+		Controller View : React Components that grab the state from stores & pass it down via props to child components.
+		
+•Redux VS Flux
+
+	Features:
+	1)Data Flow, 2)Actions, 3)Single Store, 4)boilerplate, 5)Server Side rendering for Initial page, 6)State, 7)Time travel debugging
+		Flux:
+			1)Unidirectional
+			2)The State can only triggered by actions.
+			3)Can have multiple & also the logic to change the state.
+			4)More Boilerplate.
+			5)Requires lot of API's
+			6)State is mutable
+			7)Tracking state by moving back & forth is very difficult.
+			
+			
+		Redux:
+			1)Unidirectional
+			2)The State can only triggered by actions.
+			3)Only one store & the logic to change state is separated.
+			4)Less boilerplate as compare to Flux.
+			5)It is easy to achieve in Redux.
+			6)State is immutable
+			7)It is easy to step back & forth through state changes in app with the help of Redux DevTools.
+			
+			
+

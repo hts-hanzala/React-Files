@@ -11,7 +11,8 @@ import Main from "./Components/ReactRouter/Main";
 //   MyComponent,
 // } from "./Components/LifeCycle Methods/ErrorBoundary";
 // import HttpRequest from "./Components/AxiosRequests/HttpRequest";
-// import Forms, { FormsClass } from "./Components/Forms";
+import Forms, { FormsClass } from "./Components/Forms";
+import BarChart from "./BarChart";
 // import UseState from "./Components/Hooks/UseState";
 // import UseEffect from "./Components/Hooks/UseEffect";
 // import UseMemo from "./Components/Hooks/UseMemo";
@@ -41,8 +42,8 @@ function App() {
         <MyComponent />
       </ErrorBoundary> */}
       {/* <HttpRequest /> */}
-      {/* <Form />
-      <FormsClass/> */}
+      {/* <Forms />
+      <FormsClass /> */}
       {/* <UseState />
       <UseEffect />
       <UseMemo />
@@ -54,7 +55,8 @@ function App() {
       <CustomHooks/> */}
       {/* <HttpPost />
       <HttpDelete /> */}
-      <Main />
+      {/* <Main /> */}
+      <BarChart />
     </div>
   );
 }

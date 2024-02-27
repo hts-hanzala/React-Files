@@ -13,17 +13,17 @@ export default function Forms() {
       <h1>Form Functional</h1>
       <form action="">
         {/* Controlled */}
-        {/* <label htmlFor="">
+        <label htmlFor="">
           Username :
           <input
             type="text"
             value={userName}
             onChange={(e)=>setUserName(e.target.value)}
           />
-        </label> */}
+        </label>
         {/* {console.log(userName)} */}
         {/* Uncontrolled */}
-        <input type="text" ref={nameRef} />
+        {/* <input type="text" ref={nameRef} /> */}
         <button className="btn btn-primary" onClick={formSubmit}>
           Submit
         </button>
