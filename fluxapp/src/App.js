@@ -10,12 +10,12 @@ export default class App extends Component {
   componentDidMount(){
     CountStore.addChangeListener(this.handleClick)
   }
-  fromStores(){
+  fromStores = () =>{
     return{
       count : CountStore.getCount()
     }
   }
-  handleClick(){
+  handleClick = () =>{
     this.setState(this.fromStores())
   }
   increment = () => {

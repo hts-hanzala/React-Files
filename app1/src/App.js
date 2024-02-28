@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 // import Pract from "./Components/Pract";
-import Main from "./Components/ReactRouter/Main";
+// import Main from "./Components/ReactRouter/Main";
 // import ClassBasedComponents from "./Components/ClassBasedComponents";
 // import Picture from "./Components/Picture";
 // import MountingPhase from "./Components/LifeCycle Methods/MountingPhase";
@@ -11,7 +11,7 @@ import Main from "./Components/ReactRouter/Main";
 //   MyComponent,
 // } from "./Components/LifeCycle Methods/ErrorBoundary";
 // import HttpRequest from "./Components/AxiosRequests/HttpRequest";
-import Forms, { FormsClass } from "./Components/Forms";
+// import Forms, { FormsClass } from "./Components/Forms";
 import BarChart from "./BarChart";
 // import UseState from "./Components/Hooks/UseState";
 // import UseEffect from "./Components/Hooks/UseEffect";
@@ -24,6 +24,18 @@ import BarChart from "./BarChart";
 // import CustomHooks from "./Components/Hooks/CustomHooks";
 // import HttpPost from "./Components/AxiosRequests/HttpPost";
 // import HttpDelete from "./Components/AxiosRequests/HttpDelete";
+
+export const sum = (a,b) => {
+  return a + b
+}
+
+export const getUser = () => {
+  return{
+    id:1,
+    Name : "Tom",
+    Department : "Tester"
+  }
+}
 
 function App() {
   // let link = "/logo192.png";

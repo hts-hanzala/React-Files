@@ -1,0 +1,40 @@
+•React Testing
+	Testing is a very important part of application development. Testing helps in identifying the bugs at the earlier stage and ensure the proper working of the application.
+	It is important to write unit test cases to all the React components that we create as a part of a React application.
+	There are a lot of libraries available in the market to test React applications, but most popularly used libraries are Jest and enzyme.
+
+	»Jest:
+		Jest is a JavaScript testing library which runs in the node. It was introduced by Facebook. It can be used to test any UI libraries but shines well when used to test React applications.
+		
+		Advantages of Jest:
+			1)JEST is faster because jest can run parallel test cases.
+			2)Testing DOM is very much simpler with JEST as it is bundled with JSDOM
+			3)Provides awesome support for mocking, 
+			4)Able to mock dependencies using simple mock functions,
+			5)Able to mock modules.
+			6)Able to mock timer-related functions like setTimeout, and setInterval.
+			7)Provides built-in support for coverage reports
+			8)Supports snapshot testing. This snapshot testing is a major advantage we will discuss more it in further videos
+			9)Support for the promises.
+
+		Setting up Jest:
+		Installing jest is taken care of by the create-react-app tool, so you need not install jest manually.
+		The command to run the test cases in the React application is the npm test. You can observe the command in the scripts section of the package.json file.
+		
+		Assertion and Matchers:
+		To write an assertion, you can use the built-in function "expect".
+		The expect function is used within the it() method, which returns the actual value.
+		expect:
+			It is used for writing assertions.
+			The signature of this function can accept a single parameter that is the 'Actual value' to be tested.
+		Some of the built-in matches supported by jest are:
+
+		toBe: checks the equality using (===) operator. 
+
+		toEqual: checks the equality using (==) operator. Used for checking object equality
+
+		toBeDefined: checks whether the value is defined
+
+		toBeTruthy: checks whether the value is true
+
+		There are many more matchers available in JEST. Refer to the JEST official documentation to know about matchers.
