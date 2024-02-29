@@ -50,6 +50,16 @@
 		Dispatcher : Receives actions & brodcasts payloads to reistered callback.
 		Store : Containers for app state & logic that have callbacks registered to the dispatcher, Store is a global component in Flux.
 		Controller View : React Components that grab the state from stores & pass it down via props to child components.
+		Main concepts of Flux:
+		Action, Dispatcher, Store, View
+		Dispatcher:
+			Dispatcher is working like reducer, it will dipatch the action to the stores.
+			So an agreement is happening here, only those stores will listen to dispatcher actions which have registered callbacks.
+		Store:
+			Store is a global component
+			A store responds to dispatched events/actions.
+			A store is not a model, it contains model.
+			A store is the only thing in our app which knows how to update data.
 		
 •Redux VS Flux
 
